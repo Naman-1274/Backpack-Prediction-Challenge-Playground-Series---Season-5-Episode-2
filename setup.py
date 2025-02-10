@@ -3,17 +3,18 @@ from typing import List
 
 def get_requirements(file_path:str) -> List[str]:
     
-    Dot = "-e."
+    Dot = "-e ."
     requirements=[]
     with open('requirements.txt') as f:
         requirements = f.readlines()
-        requirements = [req.strip('\n') for req in requirements]
-        
+        requirements = [req.replace("\n", " ") for req in requirements]
+
         if Dot in requirements:
             requirements.remove(Dot)
         
     return requirements
-        
+
+
     
     
     setup(
