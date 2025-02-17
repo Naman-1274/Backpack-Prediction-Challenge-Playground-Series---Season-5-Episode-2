@@ -7,6 +7,8 @@ __pycache__/
 *.so
 
 venv/
+test_cleaned.csv/
+test_cleaned.csv/
 # Distribution / packaging
 .Python
 build/
